@@ -20,8 +20,7 @@
 .python
 .python_history
 .secman
-.ssh/*
-!.ssh/config
+.ssh
 .tran
 .vim/*
 .viminfo
@@ -55,25 +54,10 @@ pipx
 PrintHood
 Recent
 'Saved Games'
-scoop/
+scoop
 Searches
 SendTo
 'Start Menu'
 Templates
 Videos
-.ssh
-
-# Oh-My-Zsh - ignore everything except .gitignore and custom directory
 .oh-my-zsh/*
-!.oh-my-zsh/.gitignore
-!.oh-my-zsh/custom/
-
-# Config directory - allow specific subdirs only
-.config/*
-!.config/opencode/
-!.config/scoop/
-!.config/fastfetch/
-!.config/gh/
-!.config/lazygit/
-!.config/nvim/
-!.config/configstore/

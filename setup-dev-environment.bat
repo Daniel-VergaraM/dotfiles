@@ -231,11 +231,11 @@ if /i "%INSTALL_PLUGINS%"=="Y" (
 if /i "%IMPORT_SCOOP_PACKAGES%"=="Y" (
     echo.
     echo Step 14: Installing Scoop packages...
-    if exist "%DOTFILES_DIR%scoop-packages.txt" (
-        call scoop import "%DOTFILES_DIR%scoop-packages.txt"
+    if exist "%DOTFILES_DIR%scoop-packages.json" (
+        call scoop import "%DOTFILES_DIR%scoop-packages.json"
         echo Scoop packages installed successfully!
     ) else (
-        echo WARNING: scoop-packages.txt not found, skipping...
+        echo WARNING: scoop-packages.json not found, skipping...
     )
 ) else (
     echo Skipping Scoop packages import...

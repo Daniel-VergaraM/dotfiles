@@ -122,9 +122,9 @@ if exist "%HOME_DIR%\.config\lazygit\config.yml" (
 REM Skipping github-copilot - contains sensitive information
 echo [SKIP] .config\github-copilot (contains sensitive information)
 
-if exist "%LOCALAPPDATA%\nvim" (
+if exist "%HOME_DIR%\nvim" (
     if not exist "%DOTFILES_DIR%\.config\nvim" mkdir "%DOTFILES_DIR%\.config\nvim"
-    xcopy /E /I /Y /Q "%LOCALAPPDATA%\nvim\*" "%DOTFILES_DIR%\.config\nvim\" >nul 2>&1
+    xcopy /E /Y /Q "%HOME_DIR%\nvim" "%DOTFILES_DIR%\.config\nvim\" >nul 2>&1
     echo [OK] Copied .config\nvim
 ) else (
     echo [SKIP] nvim config not found
@@ -132,7 +132,7 @@ if exist "%LOCALAPPDATA%\nvim" (
 
 if exist "%HOME_DIR%\.config\opencode" (
     if not exist "%DOTFILES_DIR%\.config\opencode" mkdir "%DOTFILES_DIR%\.config\opencode"
-    xcopy /E /I /Y /Q "%HOME_DIR%\.config\opencode\*" "%DOTFILES_DIR%\.config\opencode\" /EXCLUDE:"%EXCLUDE_FILE%" >nul 2>&1
+    xcopy /E /Y /Q "%HOME_DIR%\.config\opencode" "%DOTFILES_DIR%\.config\opencode\" /EXCLUDE:%EXCLUDE_FILE% >nul 2>&1
     echo [OK] Copied .config\opencode
 ) else (
     echo [SKIP] opencode config not found
@@ -147,12 +147,12 @@ if exist "%HOME_DIR%\.config\scoop\config.json" (
 )
 
 echo.
-choice /C YN /M "Update scoop-packages.txt with currently installed packages"
+choice /C YN /M "Update scoop-packages.json with currently installed packages"
 if not errorlevel 2 (
     where scoop >nul 2>&1
     if !errorlevel! equ 0 (
-        scoop export > "%DOTFILES_DIR%\scoop-packages.txt"
-        echo [OK] Updated scoop-packages.txt
+        scoop export > "%DOTFILES_DIR%\scoop-packages.json" 2>&1
+        echo [OK] Updated scoop-packages.json
     ) else (
         echo [ERROR] Scoop not found
     )
