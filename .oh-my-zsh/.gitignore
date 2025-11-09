@@ -1,0 +1,16 @@
+# custom files - ignore everything except .zsh files
+custom/*
+!custom/*.zsh
+
+# temp files directories
+cache/
+log/
+*.swp
+.DS_Store
+
+# editor configs
+.vscode
+.idea
+
+# zcompile cached files
+*.zwc

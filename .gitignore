@@ -1,0 +1,79 @@
+.bash_history
+.bash_profile
+.bin
+.bun
+.cache
+.cwd
+.dbclient
+.dendron*
+.fonts
+.gemini
+.gitconfig
+.histfile
+.ipython
+.keras
+.lesshst
+.local
+.matplotlib
+.ms-ad
+.nvm
+.python
+.python_history
+.secman
+.ssh/*
+!.ssh/config
+.tran
+.vim/*
+.viminfo
+.vscode-insiders
+.vscode-kanban
+.zcompdump-*
+.zlogin
+.zsh_history*
+.zshrc.pre-oh-my-zsh
+ansel/*
+AppData/*
+'Application Data'
+Contacts
+Cookies
+Desktop
+Documents
+Downloads
+Favorites
+go/*
+Links
+'Local Settings'
+Music
+'My Documents'
+NetHood
+NTUSER.DAT*
+ntuser.ini
+OneDrive
+Pictures
+pip
+pipx
+PrintHood
+Recent
+'Saved Games'
+scoop/
+Searches
+SendTo
+'Start Menu'
+Templates
+Videos
+.ssh
+
+# Oh-My-Zsh - ignore everything except .gitignore and custom directory
+.oh-my-zsh/*
+!.oh-my-zsh/.gitignore
+!.oh-my-zsh/custom/
+
+# Config directory - allow specific subdirs only
+.config/*
+!.config/opencode/
+!.config/scoop/
+!.config/fastfetch/
+!.config/gh/
+!.config/lazygit/
+!.config/nvim/
+!.config/configstore/
