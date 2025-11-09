@@ -6,3 +6,11 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+vim.api.nvim_create_autocmd("VimResized", {
+  group = vim.api.nvim_create_augroup("resize_windows", { clear = true }),
+  pattern = "*",
+  callback = function()
+    vim.cmd("tabdo wincmd =")
+  end,
+  desc = "Automatically equalize window sizes on terminal resize",
+})

@@ -122,9 +122,9 @@ if exist "%HOME_DIR%\.config\lazygit\config.yml" (
 REM Skipping github-copilot - contains sensitive information
 echo [SKIP] .config\github-copilot (contains sensitive information)
 
-if exist "%HOME_DIR%\nvim" (
+if exist "%HOME_DIR%\.config\nvim" (
     if not exist "%DOTFILES_DIR%\.config\nvim" mkdir "%DOTFILES_DIR%\.config\nvim"
-    xcopy /E /Y /Q "%HOME_DIR%\nvim" "%DOTFILES_DIR%\.config\nvim\" >nul 2>&1
+    xcopy /E /Y /Q "%HOME_DIR%\.config\nvim" "%DOTFILES_DIR%\.config\nvim\" >nul 2>&1
     echo [OK] Copied .config\nvim
 ) else (
     echo [SKIP] nvim config not found

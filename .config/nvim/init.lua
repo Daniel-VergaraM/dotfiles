@@ -1,2 +1,35 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+require("config.fix_resize")
+-- Prevent Neovim from changing the terminal window size or title on exit
+-- vim.api.nvim_create_autocmd("VimLeave", {
+--   callback = function()
+--     -- Disable any final control sequences that might resize the window
+--     vim.cmd("set termwinsize=")
+--     vim.cmd("set titlelen=0 notitle")
+--   end,
+-- })
+--
+-- -- Optional: disable automatic terminal resizing inside Neovim
+-- vim.opt.termguicolors = true
+-- vim.opt.title = false
+-- vim.opt.titlelen = 0
+-- vim.opt.titleold = ""
+-- vim.opt.titlestring = ""
+--
+-- -- Avoid forcing resize when opening terminal splits
+-- vim.api.nvim_create_autocmd("TermOpen", {
+--   pattern = "*",
+--   callback = function()
+--     vim.opt_local.winfixheight = true
+--     vim.opt_local.winfixwidth = true
+--   end,
+-- })
+
+-- Bloquear el redimensionamiento del terminal al salir de Neovim
+-- vim.api.nvim_create_autocmd("VimLeavePre", {
+-- callback = function()
+-- Este printf limpia sin enviar códigos de tamaño
+-- vim.cmd("silent !printf '\\033[3J\\033[H\\033[2J'")
+-- end,
+-- })
