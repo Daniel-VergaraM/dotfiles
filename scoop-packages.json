@@ -28,191 +28,191 @@
     "apps": [
         {
             "Updated": "2025-10-09T19:16:00.8996913-05:00",
-            "Info": "",
             "Version": "25.01",
             "Source": "main",
+            "Info": "",
             "Name": "7zip"
         },
         {
             "Updated": "2025-10-09T19:55:57.5786017-05:00",
-            "Info": "",
             "Version": "4.1.0",
             "Source": "extras",
+            "Info": "",
             "Name": "beaver-notes"
         },
         {
             "Updated": "2025-11-04T19:28:59.835442-05:00",
-            "Info": "",
             "Version": "1.0.5",
             "Source": "main",
+            "Info": "",
             "Name": "btop"
         },
         {
             "Updated": "2025-11-10T14:09:37.833612-05:00",
-            "Info": "",
             "Version": "1.18.0",
             "Source": "main",
+            "Info": "",
             "Name": "chafa"
         },
         {
             "Updated": "2025-10-09T19:05:46.9624608-05:00",
-            "Info": "",
             "Version": "3.14.1",
             "Source": "main",
+            "Info": "",
             "Name": "dark"
         },
         {
             "Updated": "2025-10-09T19:08:34.9153953-05:00",
-            "Info": "",
             "Version": "0.23.4",
             "Source": "main",
+            "Info": "",
             "Name": "eza"
         },
         {
             "Updated": "2025-11-03T02:28:07.6366917-05:00",
-            "Info": "",
             "Version": "2.54.0",
             "Source": "main",
+            "Info": "",
             "Name": "fastfetch"
         },
         {
             "Updated": "2025-10-29T22:25:16.9973937-05:00",
-            "Info": "",
             "Version": "10.3.0",
             "Source": "main",
+            "Info": "",
             "Name": "fd"
         },
         {
             "Updated": "2025-10-29T22:25:27.0545146-05:00",
-            "Info": "",
             "Version": "0.66.1",
             "Source": "main",
+            "Info": "",
             "Name": "fzf"
         },
         {
             "Updated": "2025-11-09T12:51:15.7282492-05:00",
-            "Info": "",
             "Version": "2.83.0",
             "Source": "main",
+            "Info": "",
             "Name": "gh"
         },
         {
             "Updated": "2025-10-17T13:32:48.6255311-05:00",
-            "Info": "",
             "Version": "2.1.1",
             "Source": "main",
+            "Info": "",
             "Name": "glow"
         },
         {
             "Updated": "2025-11-09T12:53:00.1593713-05:00",
-            "Info": "",
             "Version": "1.25.4",
             "Source": "main",
+            "Info": "",
             "Name": "go"
         },
         {
             "Updated": "2025-11-04T21:52:14.906616-05:00",
-            "Info": "",
             "Version": "1.8.1",
             "Source": "main",
+            "Info": "",
             "Name": "jq"
         },
         {
             "Updated": "2025-11-09T12:53:04.9432351-05:00",
-            "Info": "",
             "Version": "0.56.0",
             "Source": "extras",
+            "Info": "",
             "Name": "lazygit"
         },
         {
             "Updated": "2025-10-09T20:00:17.6853881-05:00",
-            "Info": "",
             "Version": "0.7.6",
             "Source": "main",
+            "Info": "",
             "Name": "magic-wormhole-rs"
         },
         {
             "Updated": "2025-10-17T00:29:35.1585095-05:00",
-            "Info": "",
             "Version": "14.2.0-19.1.7-12.0.0-r3",
             "Source": "versions",
+            "Info": "",
             "Name": "mingw-winlibs-llvm-msvcrt"
         },
         {
             "Updated": "2025-11-04T21:44:26.1687257-05:00",
-            "Info": "",
             "Version": "1.48.1",
             "Source": "extras",
+            "Info": "",
             "Name": "mongodb-compass"
         },
         {
             "Updated": "2025-11-09T12:56:23.5995817-05:00",
-            "Info": "",
             "Version": "0.11.5",
             "Source": "main",
+            "Info": "",
             "Name": "neovim"
         },
         {
             "Updated": "2025-11-10T14:09:10.7986643-05:00",
-            "Info": "",
             "Version": "0.12.0-1583",
             "Source": "versions",
+            "Info": "",
             "Name": "neovim-nightly"
         },
         {
             "Updated": "2025-11-09T12:53:45.6389958-05:00",
-            "Info": "",
             "Version": "25.1.0",
             "Source": "main",
+            "Info": "",
             "Name": "nodejs"
         },
         {
             "Updated": "2025-11-10T14:09:23.7835048-05:00",
-            "Info": "",
             "Version": "1.0.55",
             "Source": "extras",
+            "Info": "",
             "Name": "opencode"
         },
         {
             "Updated": "2025-10-10T14:05:23.7211611-05:00",
-            "Info": "",
             "Version": "21.0.2-13",
             "Source": "java",
+            "Info": "",
             "Name": "openjdk21"
         },
         {
             "Updated": "2025-11-10T14:09:33.1084223-05:00",
-            "Info": "",
             "Version": "10.21.0",
             "Source": "main",
+            "Info": "",
             "Name": "pnpm"
         },
         {
             "Updated": "2025-11-09T12:54:53.9511778-05:00",
-            "Info": "",
             "Version": "3.13.9",
             "Source": "versions",
+            "Info": "",
             "Name": "python313"
         },
         {
             "Updated": "2025-10-29T22:25:21.8085905-05:00",
-            "Info": "",
             "Version": "15.1.0",
             "Source": "main",
+            "Info": "",
             "Name": "ripgrep"
         },
         {
             "Updated": "2025-11-09T12:56:45.0263185-05:00",
-            "Info": "",
             "Version": "4.46.104",
             "Source": "extras",
+            "Info": "",
             "Name": "slack"
         },
         {
             "Updated": "2025-10-15T18:35:58.7028658-05:00",
-            "Info": "",
             "Version": "3.5.2",
             "Source": "versions",
+            "Info": "",
             "Name": "sumatrapdf-installer"
         }
     ]
