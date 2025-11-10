@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions discord-rpc)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -153,3 +153,5 @@ fi
 # }
 unset PROMPT_SP
 export TERM=xterm-256color
+loadnvm
+export DISCORD_CLIENT_ID="1413033469017067672"
