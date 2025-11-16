@@ -18,3 +18,4 @@ alias loadnvm='function _loadnvm(){ source ~/.nvm/nvm.sh; source ~/.nvm/bash_com
 alias rpcc='function _rpcc(){ ~/.oh-my-zsh/custom/plugins/discord-rpc/discord_rpc_control.sh "$@"; };_rpcc'
 alias rpcm='function _rpcm(){ ~/.oh-my-zsh/custom/plugins/discord-rpc/discord_rpc_monitor.sh "$@"; };_rpcm'
 alias vn='function _vn() { if [[ -d .venv ]]; then source .venv/Scripts/activate; else echo "No .venv directory found in the current directory."; fi; }; _vn'
+alias obsidian='cd ~/Desktop/DVergaraM/Apps/Main/'
