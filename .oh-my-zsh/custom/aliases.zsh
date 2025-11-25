@@ -19,3 +19,5 @@ alias rpcc='function _rpcc(){ ~/.oh-my-zsh/custom/plugins/discord-rpc/discord_rp
 alias rpcm='function _rpcm(){ ~/.oh-my-zsh/custom/plugins/discord-rpc/discord_rpc_monitor.sh "$@"; };_rpcm'
 alias vn='function _vn() { if [[ -d .venv ]]; then source .venv/Scripts/activate; else echo "No .venv directory found in the current directory."; fi; }; _vn'
 alias obsidian='cd ~/Desktop/DVergaraM/Apps/Main/'
+alias dns='function _dns() { doggo --json "$1" | jq ".responses[0].answers[0]"; };_dns'
+alias lg='lazygit'
