@@ -1,6 +1,21 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("config.fix_resize")
+-- Customize vimtex settings
+
+-- Enable vimtex for LaTeX rendering inside Markdown files
+-- Enable LaTeX rendering for Markdown
+vim.g.vimtex_compiler_method = "latexmk"
+vim.g.vimtex_view_method = "sumatrapdf" -- Choose PDF viewer (works well for Windows)
+
+-- Enable Markdown math rendering
+vim.g.markdown_math = 1
+
+-- Enable live Markdown preview
+vim.g.mkdp_command_for_global = 1 -- Enable global command for preview
+
+-- Configure vim-markdown for LaTeX
+
 -- Prevent Neovim from changing the terminal window size or title on exit
 -- vim.api.nvim_create_autocmd("VimLeave", {
 --   callback = function()

@@ -130,6 +130,7 @@ post_startup() {
   sleep 0.5
   if [ "$__startup_done" = false ]; then
     __startup_done=true
+    scoop update && scoop update --all && clear
     fastfetch
     echo "Bienvenido $(whoami)"
   fi
