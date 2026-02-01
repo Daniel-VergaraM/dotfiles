@@ -156,3 +156,9 @@ unset PROMPT_SP
 export TERM=xterm-256color
 loadnvm
 export DISCORD_CLIENT_ID="1413033469017067672"
+export RPC_LOCK="$HOME/.discord-rpc-monitor.lock"
+
+
+if ps -W | grep -qi '[D]iscord.exe' && [[ ! -f "$RPC_LOCK" ]]; then
+  rpcc start
+fi

@@ -138,6 +138,14 @@ if exist "%HOME_DIR%\.config\opencode" (
     echo [SKIP] opencode config not found
 )
 
+if exist "%HOME_DIR%\.config\helix\config.toml" (
+    if not exist "%DOTFILES_DIR%\.config\helix" mkdir "%DOTFILES_DIR%\.config\helix"
+    copy /Y "%HOME_DIR%\.config\helix\config.toml" "%DOTFILES_DIR%\.config\helix\config.toml" >nul 2>&1
+    echo [OK] Copied .config\helix\config.toml
+) else (
+    echo [SKIP] helix config not found
+)
+
 if exist "%HOME_DIR%\.config\scoop\config.json" (
     if not exist "%DOTFILES_DIR%\.config\scoop" mkdir "%DOTFILES_DIR%\.config\scoop"
     copy /Y "%HOME_DIR%\.config\scoop\config.json" "%DOTFILES_DIR%\.config\scoop\config.json" >nul 2>&1
