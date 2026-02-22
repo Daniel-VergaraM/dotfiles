@@ -33,3 +33,5 @@ alias update='function _update() {
   done
   [[ $# -eq 0 ]] && echo "Usage: update [scoop|node|pip|all]"
 }; _update'
+alias mingw32-ext='wt.exe -p "MinGW-32"'
+alias uv='uvicorn'
