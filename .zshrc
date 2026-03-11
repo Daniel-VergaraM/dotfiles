@@ -159,6 +159,6 @@ export DISCORD_CLIENT_ID="1413033469017067672"
 export RPC_LOCK="$HOME/.discord-rpc-monitor.lock"
 
 
-if ps -W | grep -qi '[D]iscord.exe' && [[ ! -f "$RPC_LOCK" ]]; then
-  rpcc start
-fi
+#if ps -W | grep -qi '[D]iscord.exe' && [[ ! -f "$RPC_LOCK" ]]; then
+#  rpcc start
+#fi

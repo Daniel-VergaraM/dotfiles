@@ -35,3 +35,6 @@ alias update='function _update() {
 }; _update'
 alias mingw32-ext='wt.exe -p "MinGW-32"'
 alias uv='uvicorn'
+alias enable-proxy='netsh winhttp set proxy proxy-server="http=discproxy.virtual.uniandes.edu.co:443;https=discproxy.virtual.uniandes.edu.co:443"'
+alias disable-proxy='netsh winhttp reset proxy'
+alias htop='neohtop'
