@@ -34,7 +34,7 @@ alias update='function _update() {
   [[ $# -eq 0 ]] && echo "Usage: update [scoop|node|pip|all]"
 }; _update'
 alias mingw32-ext='wt.exe -p "MinGW-32"'
-alias uv='uvicorn'
+##alias uv='uvicorn'
 alias enable-proxy='netsh winhttp set proxy proxy-server="http=discproxy.virtual.uniandes.edu.co:443;https=discproxy.virtual.uniandes.edu.co:443"'
 alias disable-proxy='netsh winhttp reset proxy'
 alias htop='neohtop'
