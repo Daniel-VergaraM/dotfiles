@@ -1,469 +1,462 @@
 {
     "apps": [
         {
-            "Name": "7zip",
-            "Source": "main",
-            "Info": "",
             "Version": "26.00",
-            "Updated": "2026-02-12T16:15:00.7414698-05:00"
+            "Source": "main",
+            "Updated": "2026-02-12T16:15:00.7414698-05:00",
+            "Name": "7zip",
+            "Info": ""
         },
         {
+            "Version": "0.2.87",
+            "Source": "main",
+            "Updated": "2026-04-02T13:58:19.1430484-05:00",
             "Name": "act",
-            "Source": "main",
-            "Info": "",
-            "Version": "0.2.86",
-            "Updated": "2026-03-25T14:31:06.0356352-05:00"
+            "Info": ""
         },
         {
-            "Name": "ani-cli",
-            "Source": "extras",
-            "Info": "",
             "Version": "4.10",
-            "Updated": "2025-12-19T16:09:42.4829145-05:00"
+            "Source": "extras",
+            "Updated": "2025-12-19T16:09:42.4829145-05:00",
+            "Name": "ani-cli",
+            "Info": ""
         },
         {
-            "Name": "aria2",
-            "Source": "main",
-            "Info": "",
             "Version": "1.37.0-1",
-            "Updated": "2025-12-19T16:10:15.0476266-05:00"
+            "Source": "main",
+            "Updated": "2025-12-19T16:10:15.0476266-05:00",
+            "Name": "aria2",
+            "Info": ""
         },
         {
-            "Name": "beaver-notes",
-            "Source": "extras",
-            "Info": "",
             "Version": "4.3.0",
-            "Updated": "2026-02-11T20:01:59.2674717-05:00"
+            "Source": "extras",
+            "Updated": "2026-02-11T20:01:59.2674717-05:00",
+            "Name": "beaver-notes",
+            "Info": ""
         },
         {
-            "Name": "btop",
-            "Source": "main",
-            "Info": "",
             "Version": "1.0.5",
-            "Updated": "2025-11-04T19:28:59.835442-05:00"
+            "Source": "main",
+            "Updated": "2025-11-04T19:28:59.835442-05:00",
+            "Name": "btop",
+            "Info": ""
         },
         {
-            "Name": "bun",
-            "Source": "main",
-            "Info": "",
             "Version": "1.3.11",
-            "Updated": "2026-03-18T23:23:29.463397-05:00"
+            "Source": "main",
+            "Updated": "2026-03-18T23:23:29.463397-05:00",
+            "Name": "bun",
+            "Info": ""
         },
         {
-            "Name": "cacert",
-            "Source": "main",
-            "Info": "",
             "Version": "2026-03-19",
-            "Updated": "2026-03-20T09:25:40.6676605-05:00"
+            "Source": "main",
+            "Updated": "2026-03-20T09:25:40.6676605-05:00",
+            "Name": "cacert",
+            "Info": ""
         },
         {
-            "Name": "chafa",
-            "Source": "main",
-            "Info": "",
             "Version": "1.18.1",
-            "Updated": "2026-02-08T15:36:07.2765596-05:00"
-        },
-        {
-            "Name": "countrytraceroute",
-            "Source": "nirsoft",
-            "Info": "",
-            "Version": "1.50",
-            "Updated": "2026-02-02T11:31:43.9952178-05:00"
-        },
-        {
-            "Name": "dark",
             "Source": "main",
-            "Info": "",
+            "Updated": "2026-02-08T15:36:07.2765596-05:00",
+            "Name": "chafa",
+            "Info": ""
+        },
+        {
             "Version": "3.14.1",
-            "Updated": "2025-10-09T19:05:46.9624608-05:00"
+            "Source": "main",
+            "Updated": "2025-10-09T19:05:46.9624608-05:00",
+            "Name": "dark",
+            "Info": ""
         },
         {
-            "Name": "docker",
-            "Source": "main",
-            "Info": "",
             "Version": "29.3.1",
-            "Updated": "2026-03-25T16:18:04.306023-05:00"
+            "Source": "main",
+            "Updated": "2026-03-25T16:18:04.306023-05:00",
+            "Name": "docker",
+            "Info": ""
         },
         {
-            "Name": "docker-compose",
-            "Source": "main",
-            "Info": "",
             "Version": "5.1.1",
-            "Updated": "2026-03-21T14:42:47.1336227-05:00"
+            "Source": "main",
+            "Updated": "2026-03-21T14:42:47.1336227-05:00",
+            "Name": "docker-compose",
+            "Info": ""
         },
         {
-            "Name": "docker-machine",
-            "Source": "main",
-            "Info": "",
             "Version": "0.16.2",
-            "Updated": "2026-02-15T21:04:27.7951326-05:00"
+            "Source": "main",
+            "Updated": "2026-02-15T21:04:27.7951326-05:00",
+            "Name": "docker-machine",
+            "Info": ""
         },
         {
-            "Name": "doggo",
-            "Source": "main",
-            "Info": "",
             "Version": "1.1.5",
-            "Updated": "2026-02-24T15:56:24.7333303-05:00"
+            "Source": "main",
+            "Updated": "2026-02-24T15:56:24.7333303-05:00",
+            "Name": "doggo",
+            "Info": ""
         },
         {
-            "Name": "eza",
-            "Source": "main",
-            "Info": "",
             "Version": "0.23.4",
-            "Updated": "2025-10-09T19:08:34.9153953-05:00"
+            "Source": "main",
+            "Updated": "2025-10-09T19:08:34.9153953-05:00",
+            "Name": "eza",
+            "Info": ""
         },
         {
-            "Name": "fastfetch",
-            "Source": "main",
-            "Info": "",
             "Version": "2.61.0",
-            "Updated": "2026-03-28T16:58:29.1348493-05:00"
+            "Source": "main",
+            "Updated": "2026-03-28T16:58:29.1348493-05:00",
+            "Name": "fastfetch",
+            "Info": ""
         },
         {
-            "Name": "fd",
-            "Source": "main",
-            "Info": "",
             "Version": "10.4.2",
-            "Updated": "2026-03-10T18:50:54.0978579-05:00"
+            "Source": "main",
+            "Updated": "2026-03-10T18:50:54.0978579-05:00",
+            "Name": "fd",
+            "Info": ""
         },
         {
-            "Name": "ffmpeg",
-            "Source": "main",
-            "Info": "",
             "Version": "8.1",
-            "Updated": "2026-03-17T15:23:52.3792243-05:00"
+            "Source": "main",
+            "Updated": "2026-03-17T15:23:52.3792243-05:00",
+            "Name": "ffmpeg",
+            "Info": ""
         },
         {
-            "Name": "figma",
-            "Source": "extras",
-            "Info": "",
             "Version": "126.2.10",
-            "Updated": "2026-03-25T20:09:28.9899308-05:00"
+            "Source": "extras",
+            "Updated": "2026-03-25T20:09:28.9899308-05:00",
+            "Name": "figma",
+            "Info": ""
         },
         {
-            "Name": "filezilla",
-            "Source": "extras",
-            "Info": "",
             "Version": "3.69.6",
-            "Updated": "2026-02-21T16:03:02.1008946-05:00"
+            "Source": "extras",
+            "Updated": "2026-02-21T16:03:02.1008946-05:00",
+            "Name": "filezilla",
+            "Info": ""
         },
         {
+            "Version": "0.71.0",
+            "Source": "main",
+            "Updated": "2026-04-05T14:05:22.3045063-05:00",
             "Name": "fzf",
-            "Source": "main",
-            "Info": "",
-            "Version": "0.70.0",
-            "Updated": "2026-03-02T09:41:01.8243882-05:00"
+            "Info": ""
         },
         {
-            "Name": "gh",
-            "Source": "main",
-            "Info": "",
             "Version": "2.89.0",
-            "Updated": "2026-03-26T17:06:34.3713234-05:00"
+            "Source": "main",
+            "Updated": "2026-03-26T17:06:34.3713234-05:00",
+            "Name": "gh",
+            "Info": ""
         },
         {
-            "Name": "glow",
-            "Source": "main",
-            "Info": "",
             "Version": "2.1.1",
-            "Updated": "2025-10-17T13:32:48.6255311-05:00"
+            "Source": "main",
+            "Updated": "2025-10-17T13:32:48.6255311-05:00",
+            "Name": "glow",
+            "Info": ""
         },
         {
-            "Name": "go",
-            "Source": "main",
-            "Info": "",
             "Version": "1.26.1",
-            "Updated": "2026-03-05T20:15:54.1555275-05:00"
+            "Source": "main",
+            "Updated": "2026-03-05T20:15:54.1555275-05:00",
+            "Name": "go",
+            "Info": ""
         },
         {
-            "Name": "helix",
-            "Source": "main",
-            "Info": "",
             "Version": "25.07.1",
-            "Updated": "2026-01-29T20:29:42.6329686-05:00"
+            "Source": "main",
+            "Updated": "2026-01-29T20:29:42.6329686-05:00",
+            "Name": "helix",
+            "Info": ""
         },
         {
-            "Name": "jq",
-            "Source": "main",
-            "Info": "",
             "Version": "1.8.1",
-            "Updated": "2025-11-04T21:52:14.906616-05:00"
+            "Source": "main",
+            "Updated": "2025-11-04T21:52:14.906616-05:00",
+            "Name": "jq",
+            "Info": ""
         },
         {
+            "Version": "25.12",
+            "Source": "main",
+            "Updated": "2025-12-31T10:43:44.1281917-05:00",
             "Name": "latex",
-            "Source": "main",
-            "Info": "",
-            "Version": "25.12",
-            "Updated": "2025-12-31T10:43:44.1281917-05:00"
+            "Info": ""
         },
         {
-            "Name": "lazygit",
-            "Source": "extras",
-            "Info": "",
             "Version": "0.60.0",
-            "Updated": "2026-03-09T20:21:32.2507819-05:00"
+            "Source": "extras",
+            "Updated": "2026-03-09T20:21:32.2507819-05:00",
+            "Name": "lazygit",
+            "Info": ""
         },
         {
-            "Name": "magic-wormhole-rs",
-            "Source": "main",
-            "Info": "",
             "Version": "0.7.7",
-            "Updated": "2026-03-09T20:21:43.0532871-05:00"
+            "Source": "main",
+            "Updated": "2026-03-09T20:21:43.0532871-05:00",
+            "Name": "magic-wormhole-rs",
+            "Info": ""
         },
         {
-            "Name": "maven",
-            "Source": "main",
-            "Info": "",
             "Version": "3.9.14",
-            "Updated": "2026-03-12T22:06:16.5698183-05:00"
+            "Source": "main",
+            "Updated": "2026-03-12T22:06:16.5698183-05:00",
+            "Name": "maven",
+            "Info": ""
         },
         {
-            "Name": "miktex",
-            "Source": "main",
-            "Info": "",
             "Version": "25.12",
-            "Updated": "2025-12-31T10:46:13.3463018-05:00"
+            "Source": "main",
+            "Updated": "2025-12-31T10:46:13.3463018-05:00",
+            "Name": "miktex",
+            "Info": ""
         },
         {
-            "Name": "mingw-winlibs-llvm-msvcrt",
-            "Source": "versions",
-            "Info": "",
             "Version": "14.2.0-19.1.7-12.0.0-r3",
-            "Updated": "2025-10-17T00:29:35.1585095-05:00"
+            "Source": "versions",
+            "Updated": "2025-10-17T00:29:35.1585095-05:00",
+            "Name": "mingw-winlibs-llvm-msvcrt",
+            "Info": ""
         },
         {
-            "Name": "mongodb-compass",
-            "Source": "extras",
-            "Info": "",
             "Version": "1.49.4",
-            "Updated": "2026-03-11T20:07:14.8426909-05:00"
+            "Source": "extras",
+            "Updated": "2026-03-11T20:07:14.8426909-05:00",
+            "Name": "mongodb-compass",
+            "Info": ""
         },
         {
-            "Name": "mpv",
-            "Source": "extras",
-            "Info": "",
             "Version": "0.41.0",
-            "Updated": "2025-12-25T20:23:52.2419027-05:00"
+            "Source": "extras",
+            "Updated": "2025-12-25T20:23:52.2419027-05:00",
+            "Name": "mpv",
+            "Info": ""
         },
         {
-            "Name": "msys2",
-            "Source": "main",
-            "Info": "",
             "Version": "2026-03-22",
-            "Updated": "2026-03-22T15:32:00.7886176-05:00"
+            "Source": "main",
+            "Updated": "2026-03-22T15:32:00.7886176-05:00",
+            "Name": "msys2",
+            "Info": ""
         },
         {
+            "Version": "1.2.0",
+            "Source": "extras",
+            "Updated": "2026-03-09T20:49:32.0987663-05:00",
             "Name": "neohtop",
-            "Source": "extras",
-            "Info": "",
-            "Version": "1.2.0",
-            "Updated": "2026-03-09T20:49:32.0987663-05:00"
+            "Info": ""
         },
         {
-            "Name": "neovim",
-            "Source": "main",
-            "Info": "",
             "Version": "0.12.0",
-            "Updated": "2026-03-29T18:03:45.0732099-05:00"
+            "Source": "main",
+            "Updated": "2026-03-29T18:03:45.0732099-05:00",
+            "Name": "neovim",
+            "Info": ""
         },
         {
-            "Name": "neovim-nightly",
-            "Source": "<auto-generated>",
-            "Info": "",
             "Version": "0.12.0-1632",
-            "Updated": "2025-11-18T01:27:52.7805097-05:00"
-        },
-        {
-            "Name": "nginx",
-            "Source": "main",
-            "Info": "",
-            "Version": "1.29.7",
-            "Updated": "2026-03-24T15:57:51.8845325-05:00"
-        },
-        {
-            "Name": "nmap",
-            "Source": "main",
-            "Info": "",
-            "Version": "7.99",
-            "Updated": "2026-03-27T11:11:06.3117643-05:00"
-        },
-        {
-            "Name": "nodejs",
-            "Source": "main",
-            "Info": "",
-            "Version": "25.8.2",
-            "Updated": "2026-03-24T21:57:17.8307524-05:00"
-        },
-        {
-            "Name": "opencode",
             "Source": "<auto-generated>",
-            "Info": "",
-            "Version": "1.3.9",
-            "Updated": "2026-03-31T09:59:29.2364991-05:00"
+            "Updated": "2025-11-18T01:27:52.7805097-05:00",
+            "Name": "neovim-nightly",
+            "Info": ""
         },
         {
-            "Name": "openjdk",
-            "Source": "java",
-            "Info": "",
+            "Version": "1.29.7",
+            "Source": "main",
+            "Updated": "2026-03-24T15:57:51.8845325-05:00",
+            "Name": "nginx",
+            "Info": ""
+        },
+        {
+            "Version": "7.99",
+            "Source": "main",
+            "Updated": "2026-03-27T11:11:06.3117643-05:00",
+            "Name": "nmap",
+            "Info": ""
+        },
+        {
+            "Version": "25.9.0",
+            "Source": "main",
+            "Updated": "2026-04-02T13:58:34.8914485-05:00",
+            "Name": "nodejs",
+            "Info": ""
+        },
+        {
+            "Version": "1.3.13",
+            "Source": "<auto-generated>",
+            "Updated": "2026-04-03T21:12:48.0339121-05:00",
+            "Name": "opencode",
+            "Info": ""
+        },
+        {
             "Version": "25.0.2-10",
-            "Updated": "2026-01-20T16:56:46.6798306-05:00"
-        },
-        {
-            "Name": "openjdk21",
             "Source": "java",
-            "Info": "",
+            "Updated": "2026-01-20T16:56:46.6798306-05:00",
+            "Name": "openjdk",
+            "Info": ""
+        },
+        {
             "Version": "21.0.2-13",
-            "Updated": "2025-10-10T14:05:23.7211611-05:00"
+            "Source": "java",
+            "Updated": "2025-10-10T14:05:23.7211611-05:00",
+            "Name": "openjdk21",
+            "Info": ""
         },
         {
-            "Name": "pandoc",
-            "Source": "main",
-            "Info": "",
             "Version": "3.9.0.2",
-            "Updated": "2026-03-21T18:23:04.6915693-05:00"
+            "Source": "main",
+            "Updated": "2026-03-21T18:23:04.6915693-05:00",
+            "Name": "pandoc",
+            "Info": ""
         },
         {
-            "Name": "pnpm",
-            "Source": "main",
-            "Info": "",
             "Version": "10.33.0",
-            "Updated": "2026-03-24T15:57:59.1866145-05:00"
+            "Source": "main",
+            "Updated": "2026-03-24T15:57:59.1866145-05:00",
+            "Name": "pnpm",
+            "Info": ""
         },
         {
-            "Name": "postgresql",
-            "Source": "main",
-            "Info": "",
             "Version": "18.3",
-            "Updated": "2026-02-26T15:32:33.6937399-05:00"
+            "Source": "main",
+            "Updated": "2026-02-26T15:32:33.6937399-05:00",
+            "Name": "postgresql",
+            "Info": ""
         },
         {
-            "Name": "proxychains",
-            "Source": "main",
-            "Info": "",
             "Version": "0.6.8",
-            "Updated": "2026-02-19T23:14:11.2425176-05:00"
+            "Source": "main",
+            "Updated": "2026-02-19T23:14:11.2425176-05:00",
+            "Name": "proxychains",
+            "Info": ""
         },
         {
-            "Name": "python313",
-            "Source": "versions",
-            "Info": "",
             "Version": "3.13.12",
-            "Updated": "2026-02-06T11:14:02.9631479-05:00"
-        },
-        {
-            "Name": "ripgrep",
-            "Source": "main",
-            "Info": "",
-            "Version": "15.1.0",
-            "Updated": "2025-10-29T22:25:21.8085905-05:00"
-        },
-        {
-            "Name": "rust",
-            "Source": "main",
-            "Info": "",
-            "Version": "1.94.1",
-            "Updated": "2026-03-27T12:01:55.7721571-05:00"
-        },
-        {
-            "Name": "slack",
-            "Source": "extras",
-            "Info": "",
-            "Version": "4.49.81",
-            "Updated": "2026-03-28T16:58:56.0592845-05:00"
-        },
-        {
-            "Name": "speedtest-cli",
-            "Source": "main",
-            "Info": "",
-            "Version": "1.2.0",
-            "Updated": "2025-12-02T22:45:39.5930338-05:00"
-        },
-        {
-            "Name": "sqlite",
-            "Source": "main",
-            "Info": "",
-            "Version": "3.51.3",
-            "Updated": "2026-03-21T18:23:08.2765618-05:00"
-        },
-        {
-            "Name": "sumatrapdf-installer",
             "Source": "versions",
-            "Info": "",
+            "Updated": "2026-02-06T11:14:02.9631479-05:00",
+            "Name": "python313",
+            "Info": ""
+        },
+        {
+            "Version": "15.1.0",
+            "Source": "main",
+            "Updated": "2025-10-29T22:25:21.8085905-05:00",
+            "Name": "ripgrep",
+            "Info": ""
+        },
+        {
+            "Version": "1.94.1",
+            "Source": "main",
+            "Updated": "2026-03-27T12:01:55.7721571-05:00",
+            "Name": "rust",
+            "Info": ""
+        },
+        {
+            "Version": "4.49.81",
+            "Source": "extras",
+            "Updated": "2026-03-28T16:58:56.0592845-05:00",
+            "Name": "slack",
+            "Info": ""
+        },
+        {
+            "Version": "1.2.0",
+            "Source": "main",
+            "Updated": "2025-12-02T22:45:39.5930338-05:00",
+            "Name": "speedtest-cli",
+            "Info": ""
+        },
+        {
+            "Version": "3.51.3",
+            "Source": "main",
+            "Updated": "2026-03-21T18:23:08.2765618-05:00",
+            "Name": "sqlite",
+            "Info": ""
+        },
+        {
             "Version": "3.6",
-            "Updated": "2026-03-17T15:24:21.7992264-05:00"
+            "Source": "versions",
+            "Updated": "2026-03-17T15:24:21.7992264-05:00",
+            "Name": "sumatrapdf-installer",
+            "Info": ""
         },
         {
-            "Name": "vcpkg",
-            "Source": "main",
-            "Info": "",
             "Version": "2026.03.18",
-            "Updated": "2026-03-21T18:25:11.8345277-05:00"
+            "Source": "main",
+            "Updated": "2026-03-21T18:25:11.8345277-05:00",
+            "Name": "vcpkg",
+            "Info": ""
         },
         {
-            "Name": "vcredist2008",
-            "Source": "extras",
-            "Info": "",
             "Version": "9.0.30729.5677",
-            "Updated": "2025-11-16T13:23:19.8820938-05:00"
-        },
-        {
-            "Name": "wget",
-            "Source": "main",
-            "Info": "",
-            "Version": "1.21.4",
-            "Updated": "2025-12-19T16:10:52.9100492-05:00"
-        },
-        {
-            "Name": "wireshark",
             "Source": "extras",
-            "Info": "",
-            "Version": "4.6.4",
-            "Updated": "2026-02-26T15:32:52.7677197-05:00"
+            "Updated": "2025-11-16T13:23:19.8820938-05:00",
+            "Name": "vcredist2008",
+            "Info": ""
         },
         {
-            "Name": "yq",
+            "Version": "1.21.4",
             "Source": "main",
-            "Info": "",
-            "Version": "4.52.5",
-            "Updated": "2026-03-25T20:09:39.8973523-05:00"
+            "Updated": "2025-12-19T16:10:52.9100492-05:00",
+            "Name": "wget",
+            "Info": ""
         },
         {
-            "Name": "yt-dlp",
-            "Source": null,
-            "Info": "",
+            "Version": "4.6.4",
+            "Source": "extras",
+            "Updated": "2026-02-26T15:32:52.7677197-05:00",
+            "Name": "wireshark",
+            "Info": ""
+        },
+        {
+            "Version": "4.52.5",
+            "Source": "main",
+            "Updated": "2026-03-25T20:09:39.8973523-05:00",
+            "Name": "yq",
+            "Info": ""
+        },
+        {
             "Version": "2026.03.17",
-            "Updated": "2026-03-18T23:47:13.8193785-05:00"
+            "Source": null,
+            "Updated": "2026-03-31T22:41:39.8167067-05:00",
+            "Name": "yt-dlp",
+            "Info": ""
         }
     ],
     "buckets": [
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-03-31T10:02:40-05:00",
-            "Manifests": 1480
+            "Updated": "2026-04-06T07:37:40-05:00",
+            "Manifests": 1490
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-03-31T07:40:47-05:00",
-            "Manifests": 2287
+            "Updated": "2026-04-06T07:38:09-05:00",
+            "Manifests": 2289
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-03-31T09:05:20-05:00",
-            "Manifests": 560
+            "Updated": "2026-04-06T10:07:19-05:00",
+            "Manifests": 562
         },
         {
             "Name": "nirsoft",
             "Source": "https://github.com/ScoopInstaller/Nirsoft",
-            "Updated": "2026-03-28T06:32:15-05:00",
+            "Updated": "2026-04-02T09:53:51-05:00",
             "Manifests": 290
         },
         {
             "Name": "java",
             "Source": "https://github.com/ScoopInstaller/Java",
-            "Updated": "2026-03-25T21:29:48-05:00",
+            "Updated": "2026-04-01T03:17:08-05:00",
             "Manifests": 325
         }
     ]
