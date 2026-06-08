@@ -8,3 +8,6 @@ fi
 # if command -v zoxide > /dev/null; then
 #  eval "$(zoxide init bash)"
 # fi
+
+# strix
+export PATH=/c/Users/thefl/.strix/bin:$PATH

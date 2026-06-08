@@ -14,3 +14,11 @@ vim.api.nvim_create_autocmd("VimResized", {
   end,
   desc = "Automatically equalize window sizes on terminal resize",
 })
+
+-- Forzar la limpieza del búfer de la terminal al salir de Neovim
+vim.api.nvim_create_autocmd("VimLeave", {
+  callback = function()
+    -- Envía las secuencias ANSI para limpiar pantalla y restaurar el búfer alternativo
+    io.write("\27[2J\27[?1049l")
+  end,
+})

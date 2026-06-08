@@ -1,136 +1,280 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+# ============================================================
+# 1. INSTANT PROMPT - Powerlevel10k
+# Mantener arriba para evitar parpadeos
+# ============================================================
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# ============================================================
+# 2. VARIABLES DE ENTORNO Y PATHS
+# ============================================================
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+export PATH="/home/dvergaram/.opencode/bin:$PATH"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+export XDG_CONFIG_HOME="$HOME/.config"
+export TERM="xterm-256color"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# Fix para kitty keyboard protocol en Ghostty/winghostty
+# Evita que teclas como ~ se conviertan en secuencias ;Xu
+printf '\033[<u'
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+export DISCORD_CLIENT_ID="1413033469017067672"
+export RPC_LOCK="$HOME/.discord-rpc-monitor.lock"
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+export STARSHIP_LOG="error"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+# ============================================================
+# 3. ZINIT - Plugin Manager
+# ============================================================
+export ZINIT_HOME="$HOME/.local/share/zinit/zinit.git"
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+if [[ ! -f "$ZINIT_HOME/zinit.zsh" ]]; then
+  print -P "%F{33}Installing Zinit...%f"
+  command mkdir -p "$HOME/.local/share/zinit"
+  command git clone https://github.com/zdharma-continuum/zinit "$ZINIT_HOME"
+fi
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+source "$ZINIT_HOME/zinit.zsh"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# ============================================================
+# 4. OPCIONES DE ZSH
+# ============================================================
+setopt autocd
+setopt HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+# Glob y match case-insensitive
+unsetopt CASE_GLOB
+unsetopt CASE_MATCH
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+# ============================================================
+# 5. HISTORIAL
+# ============================================================
+HISTSIZE=2000
+SAVEHIST=2000
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions ) # discord-rpc)
+# ============================================================
+# 6. COMPLETIONS
+# ============================================================
+autoload -Uz compinit
+compinit -C
 
-source $ZSH/oh-my-zsh.sh
+# Completion case-insensitive
+zstyle ':completion:*' matcher-list \
+  'm:{a-zA-Z}={A-Za-z}' \
+  'r:|[._-]=* r:|=*' \
+  'l:|=* r:|=*'
 
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# ============================================================
+# 7. AUTOCOMPLETE CASE-INSENSITIVE
+# ============================================================
+zstyle ':autocomplete:*' verbose no
+zstyle ':autocomplete:*' matcher 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':autocomplete:list-choices:*' matcher 'm:{a-zA-Z}={A-Za-z}'
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+autocd_case_insensitive() {
+  if [[ -z "$BUFFER" ]]; then
+    zle .accept-line
+    return
+  fi
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+  local cmd="$BUFFER"
+  local found_dir
 
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
+  found_dir=$(find . -maxdepth 1 -type d -iname "$cmd" 2>/dev/null | head -1)
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+  if [[ -n "$found_dir" && "$found_dir" != "." && "$found_dir" != "./" ]]; then
+    local dir_name
+    dir_name=$(basename "$found_dir")
+    BUFFER="cd \"$dir_name\""
+    zle accept-line
+    return
+  fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  zle .accept-line
+}
+
+zle -N accept-line autocd_case_insensitive
+bindkey '^M' accept-line
+
+
+# ============================================================
+# 8. PLUGINS
+# ============================================================
+
+# Debe cargar primero
+zinit light marlonrichert/zsh-autocomplete
+
+# Plugins async
+zinit ice wait lucid
+zinit light zsh-users/zsh-autosuggestions
+
+zinit ice wait lucid
+zinit light zsh-users/zsh-syntax-highlighting
+
+# Anexos de Zinit
+zinit light-mode for \
+  zdharma-continuum/zinit-annex-as-monitor \
+  zdharma-continuum/zinit-annex-bin-gem-node \
+  zdharma-continuum/zinit-annex-patch-dl \
+  zdharma-continuum/zinit-annex-rust
+
+
+# ============================================================
+# 9. PROMPT - Starship
+# ============================================================
+eval "$(starship init zsh)"
+
+
+# ============================================================
+# 10. LAZY NVM
+# ============================================================
 export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+load-nvm() {
+  unset -f node npm npx nvm
 
-# secman
-PROG=secman source <(secman completion zsh)
+  if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    source "$NVM_DIR/nvm.sh"
+  else
+    echo "Error: nvm.sh no encontrado en $NVM_DIR"
+    return 1
+  fi
+}
+
+for cmd in node npm npx nvm; do
+  eval "$cmd() { load-nvm; command $cmd \"\$@\" }"
+done
+
+
+# ============================================================
+# 11. PROXY UNIANDES
+# ============================================================
+export PROXY_HOST="discproxy.virtual.uniandes.edu.co"
+export PROXY_PORT="443"
+export PROXY_URL="http://${PROXY_HOST}:${PROXY_PORT}"
+alias pon='proxy_on'
+alias poff='proxy_off'
+alias pstate='env | grep -i proxy'
+
+
+# ============================================================
+# 12. FUNCIONES PERSONALIZADAS
+# ============================================================
 
 autoload -Uz add-zsh-hook
 
-export XDG_CONFIG_HOME="$HOME/.config"
+
+# ------------------------------------------------------------
+# Guardar directorio actual
+# ------------------------------------------------------------
+store_cwd_on_cd() {
+  if [[ "$OLDPWD" != "$PWD" ]]; then
+    pwd -P >! ~/.cwd 2>/dev/null
+  fi
+}
+
+chpwd_functions+=(store_cwd_on_cd)
+
+
+# ------------------------------------------------------------
+# back: volver al último directorio guardado
+# ------------------------------------------------------------
+back() {
+  if [[ -f ~/.cwd ]]; then
+    local TARGET_DIR
+    TARGET_DIR=$(cat ~/.cwd | tr -d '[:space:]')
+
+    if [[ -n "$TARGET_DIR" && -d "$TARGET_DIR" ]]; then
+      cd "$TARGET_DIR" || return 1
+    else
+      echo "Error: ~/.cwd está vacío o el directorio no existe."
+      return 1
+    fi
+  else
+    echo "Error: ~/.cwd no existe. Usa cd primero para crearlo."
+    return 1
+  fi
+}
+
+_back_completion() {
+  local -a dirs
+
+  if [[ -f ~/.cwd ]]; then
+    local saved_dir
+    saved_dir=$(cat ~/.cwd | tr -d '[:space:]')
+
+    if [[ -n "$saved_dir" ]]; then
+      dirs=("$saved_dir")
+    fi
+  fi
+
+  compadd -a dirs
+}
+
+compdef _back_completion back
+
+
+# ------------------------------------------------------------
+# mkcd: crear directorio y entrar
+# ------------------------------------------------------------
+mkcd() {
+  if [[ -z "$1" ]]; then
+    echo "Error: mkcd requiere un nombre de directorio"
+    echo "Uso: mkcd <directorio>"
+    return 1
+  fi
+
+  mkdir -p "$1" && cd "$1"
+}
+
+_mkcd_completion() {
+  local -a dirs_to_complete
+  local current_word="${words[-1]}"
+
+  if [[ -z "$current_word" ]]; then
+    dirs_to_complete=($(ls -d */ 2>/dev/null | sed 's/\/$//'))
+    compadd -a dirs_to_complete
+  else
+    dirs_to_complete=($(ls -d */ 2>/dev/null | sed 's/\/$//' | grep -i "^${current_word}"))
+
+    if [[ ${#dirs_to_complete[@]} -gt 0 ]]; then
+      compadd -a dirs_to_complete
+    else
+      compadd "$current_word"
+    fi
+  fi
+}
+
+compdef _mkcd_completion mkcd
+
+
+# ============================================================
+# 13. POST-STARTUP
+# ============================================================
 
 __startup_done=false
+
 post_startup() {
-  sleep 0.5
-  if [ "$__startup_done" = false ]; then
+  if [[ "$__startup_done" == false ]]; then
     __startup_done=true
+
+    sleep 0.5
+
+    # Descomenta si quieres actualizar Scoop siempre al abrir terminal.
+    # Ojo: puede hacer lenta la apertura.
     scoop update && scoop update --all && clear
+
+    nvm use
+
+    clear
     fastfetch
     echo "Bienvenido $(whoami)"
   fi
@@ -138,27 +282,61 @@ post_startup() {
 
 add-zsh-hook precmd post_startup
 
-function store_cwd_on_cd() {
-    if [[ "$OLDPWD" != "$PWD" ]]; then
-        pwd -P >! ~/.cwd 2>/dev/null
-    fi
+
+STATUS_LOG_FILE="$HOME/.cmd_errors.log"
+
+log_and_reset_status() {
+  # 1. Immediately capture the last command's exit code
+  local last_status=$?
+
+  # 2. Only log if the command actually failed (status is not 0)
+  if [ $last_status -ne 0 ]; then
+    # Get the last command from history
+    local last_cmd=$(fc -ln -1) 
+    
+    # Log the timestamp, exit code, and command to the file
+    echo "$(date '+%Y-%m-%d %H:%M:%S') [EXIT: $last_status] Cmd: $last_cmd" >> "$STATUS_LOG_FILE"
+  fi
+
+  # 3. Force the status back to 0 for the prompt
+  true
 }
 
-chpwd_functions+=(store_cwd_on_cd)
-if command -v zoxide > /dev/null; then
-  eval "$(zoxide init zsh)"
+add-zsh-hook precmd log_and_reset_status
+
+kill_children_on_exit() {
+  # 1. Kill all background jobs and child processes of this process group
+  kill -TERM -- -$$ 2>/dev/null
+  
+  # 2. Give the processes a tiny moment to spin down gracefully
+  sleep 0.1
+  
+  # 3. Force-kill any stubborn remaining direct child PIDs
+  local children=$(pgrep -P $$)
+  if [ -n "$children" ]; then
+    kill -KILL $children 2>/dev/null
+  fi
+}
+
+add-zsh-hook zshexit kill_children_on_exit
+
+alias ff=fastfetch
+
+# ============================================================
+# 14. ALIASES EXTERNOS
+# ============================================================
+if [[ -f ~/.zsh_aliases ]]; then
+  source ~/.zsh_aliases
 fi
-# Bloquear secuencias de redimensionamiento al cerrar Neovim o programas TUI
-# precmd() {
-  # printf '\033[3J\033[H\033[2J' > /dev/tty
-# }
-unset PROMPT_SP
-export TERM=xterm-256color
-loadnvm
-export DISCORD_CLIENT_ID="1413033469017067672"
-export RPC_LOCK="$HOME/.discord-rpc-monitor.lock"
 
+export EDITOR=vim
 
-#if ps -W | grep -qi '[D]iscord.exe' && [[ ! -f "$RPC_LOCK" ]]; then
-#  rpcc start
+# 15. RClone 
+# Sincronización asíncrona de Desktop a Google Drive
+#if ! pgrep -f "rclone sync.*1CjiPOmftyqRf4P9ngl0nwAyrTP5H9Vd1" > /dev/null; then
+    # Quitamos --progress y añadimos la redirección y &!
+#    rclone sync ~/Desktop "gdrive:1CjiPOmftyqRf4P9ngl0nwAyrTP5H9Vd1" \
+#        --exclude-from ~/AppData/Roaming/driveignore/.global_driveignore \
+#        > /tmp/rclone_desktop_sync.log 2>&1 &!
 #fi
+export PATH="$HOME/scoop/shims:$PATH"

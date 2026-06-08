@@ -13,8 +13,30 @@ alias obsidian='cd ~/Desktop/DVergaraM/Apps/Main/'
 alias lg='lazygit'
 alias mingw32-ext='wt.exe -p "MinGW-32"'
 alias htop='neohtop'
+alias java='~/scoop/apps/openjdk25/current/bin/java.exe'
+alias javac='~/scoop/apps/openjdk25/current/bin/javac.exe'
+alias javaws='~/scoop/apps/openjdk25/current/bin/javaw.exe'
+
 
 # Aliases with functions and without admin permissions
+alias fg='function _fg() {
+  if [[ -d .git ]]; then
+    for arg in "$@"; do
+      case "$arg" in
+        f) git fetch --all && git pull ;;
+        p) git push ;;
+
+        *) echo "Usage: fg [f|p]" ;;
+      esac
+    done
+    [[ $# -eq 0 ]] && echo "Usage: fg [f|p]"
+  else
+    echo "Not a git repository.";
+    return 1;
+  fi;
+};
+_fg'
+
 alias dns='function _dns() {
     doggo --json "$1" | jq ".responses[0].answers[0]";
     return 0;

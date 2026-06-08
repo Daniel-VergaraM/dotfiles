@@ -61,3 +61,9 @@ SendTo
 Templates
 Videos
 .oh-my-zsh/*
+
+# managed
+**.data.json
+**.node-persist**
+**_IGNORE_**
+# end managed

@@ -6,40 +6,9 @@
     "prune": true,
     "reserved": 10000
   },
-  "model": "ollama/qwen3.5:cloud",
+  "model": "anthropic/claude-haiku-4-5",
   "permission": {
     "*": "allow"
-  },
-  "provider": {
-    "ollama": {
-      "models": {
-        "llama2": {
-          "name": "Llama 2"
-        },
-        "mistral": {
-          "name": "Mistral"
-        },
-        "neural-chat": {
-          "name": "Neural Chat"
-        },
-        "qwen2.5-coder:7b": {
-          "name": "Qwen 2.5 Coder 7B"
-        },
-        "qwen3.5:cloud": {
-          "_launch": true,
-          "limit": {
-            "context": 262144,
-            "output": 32768
-          },
-          "name": "qwen3.5:cloud"
-        }
-      },
-      "name": "Ollama",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "http://localhost:11434/v1"
-      }
-    }
   },
   "server": {
     "port": 4096
