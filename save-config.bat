@@ -32,6 +32,20 @@ if exist "%HOME_DIR%\.bashrc" (
     echo [SKIP] .bashrc not found
 )
 
+if exist "%HOME_DIR%\komorebi.json" (
+  copy /Y "%HOME_DIR%\komorebi.json" "%DOTFILES_DIR%\komorebi.json" >nul 2>&1
+  echo [OK] Copied komorebi.json
+) else (
+  echo [SKIP] komorebi.json not found
+)
+
+if exist "%HOME_DIR%\komorebi.bar.json" (
+  copy /Y "%HOME_DIR%\komorebi.bar.json" "%DOTFILES_DIR%\komorebi.bar.json" >nul 2>&1
+  echo [OK] Copied komorebi.bar.json
+) else (
+  echo [SKIP] komorebi.bar.json not found
+)
+
 if exist "%HOME_DIR%\.bash_profile" (
     copy /Y "%HOME_DIR%\.bash_profile" "%DOTFILES_DIR%\.bash_profile" >nul 2>&1
     echo [OK] Copied .bash_profile
